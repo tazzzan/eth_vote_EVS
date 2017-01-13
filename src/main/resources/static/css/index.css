@@ -1,0 +1,40 @@
+#header {
+	background-color: #55af55;
+	width: 100%;
+	height: 5%;
+	float: left;
+}
+
+#ethvStart{
+	width: 10%;
+	height: 100%;
+	font-size: large;
+	float: left;
+}
+
+#tabs{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.nav-link{
+	color: ghostwhite;
+}
+
+#loggedInUser {
+	width: 20%;
+	height: 100%;
+	font-size: medium;
+	color: white;
+	float: right;
+}
+
+#ng-view{
+	position: absolute;
+	top: 5%;
+	left: 0;
+	width: 100%;
+	height: auto;
+	background-color: #d9d6cc;
+}

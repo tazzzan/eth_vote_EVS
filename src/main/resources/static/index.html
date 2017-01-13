@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>EVS</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/liveStream.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/overview_layout.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/controllers/controller.js"></script>
+    <script src="/js/controllers/PublisherController.js"></script>
+    <script src="/js/controllers/UserController.js"></script>
+
+</head>
+
+<body ng-app="Evs">
+
+<div ng-controller="simpleController">
+
+    <!-- Here ui_header -->
+    <div id="header" class="fixed-top">
+
+        <div id="ethvStart">
+            <p><a href="#/publisher" style="color: white;">Eth-Vote</a></p>
+        </div>
+
+        <ul id="tabs" class="nav nav-pills nav-justified">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Timeline</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/publisher">Publish</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/users">System-UserMgmt</a></li>
+        </ul>
+
+
+
+
+        <div id="loggedInUser">
+            <p> Logged in:
+                <a href="#/profile" style="color: white;">
+                {{loggedInUser.name}}
+                </a>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Body for views -->
+    <div id="ng-view">
+        <div ng-view></div>
+    </div>
+
+
+</div>
+</body>
+</html>
